@@ -1,0 +1,372 @@
+.cfm-logo{ 
+    height: 140px;
+    width: 140px;
+}
+
+.cfm-text-over-container
+{
+    position: relative;
+}
+
+.cfm-text-over-text
+{
+    position:absolute;
+    width:50%;
+    top:50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    color:#fff; 
+    text-align:center;
+    margin-left:43%;
+    margin-right:57;
+    font-size:2.4em;
+    font-weight:bold;
+    -webkit-text-stroke: .03rem orange;
+}
+
+.cfm-image-blur {
+  filter: blur(1px);
+}
+
+
+.cfm-container {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+
+  top:9.9rem;
+}
+
+.cfm-admin-nav-link
+{
+  font-size: 16pt;
+  display: block;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+.cfm-center 
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* width:100%; */
+}
+
+.cfm-header-text
+{
+    color:white;
+    text-align:center;
+    font-size:2.2em;
+}
+
+.cfm-content
+{
+    position:relative;
+    top:8rem;
+    height:3rem;
+    padding-bottom:.5rem;
+}
+
+.cfm-content-width{
+    width:max-content;
+}
+
+.cfm-footer-text
+{
+    font-size:1rem;
+    color:white;
+}
+
+.cfm-scfd-logo
+{
+  height:85px;
+  width: 192px;
+}
+
+.cfm-bg-footer{
+  background-color:navy;
+  color:white;
+}
+
+.cfm-footer-section,
+.cfm-footer-left, 
+.cfm-footer-right
+{
+  display:inline-block;
+}
+
+.cfm-admin-container
+{
+  position:relative;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  width:100%;
+  top:9.9rem;
+}
+
+.cfm-social-media-icon {
+  height:35px;
+  width: 35px;
+}
+
+.cfp-p-upcoming {
+  margin-bottom:2px;
+}
+
+.cfp-p-upcoming-special-highlight
+{
+  color: #800020;
+  font-weight:bold;
+}
+
+.cfm-special-event-box
+    {
+      border: 2px solid #800020;
+      margin:0;
+      background-color:  rgba(211,211,211,.9);
+    }
+
+.cfm-required
+{
+  color:red;
+  font-weight:bold;
+}
+
+.cfm-show
+{
+  display:block;
+}
+
+.cfm-hide
+{
+  display:none;
+}
+
+.cfm-special-link
+{
+  color:cyan;
+  font-weight: bold;
+}
+
+.cfm-datatable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.cfm-datatable-th, .cfm-datatable-td {
+  padding: 6px;
+  border: 1px solid #ddd;
+}
+
+.cfm-datatable-th {
+  background-color:silver;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+input[type=button] {
+  background-color: blue;
+  border: 1 px solid black;
+  color: white;
+  padding: 4px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  }
+
+  input[type=button]:hover {
+    background-color: navy;
+    }
+
+
+@media(max-width: 1280px) {
+    .cfm-text-over-text {
+      font-size: 1.8em;
+      margin-left:41%;
+      margin-right:59%;
+    }
+
+    .cfm-header-text
+    {
+        font-size:2.2em;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    .cfm-text-over-text {
+      font-size: 1.6em;
+      margin-left:41%;
+      margin-right:59%;
+    }
+
+    .cfm-header-text
+    {
+        font-size:2.2em;
+    }
+  }
+
+  @media(max-width: 920px) {
+    .cfm-text-over-text {
+      font-size: 2.3em;
+      margin-left:41%;
+      margin-right:59%;
+    }
+
+    .cfm-footer-text
+    {
+        font-size:.8em;
+    }
+
+    .cfm-scfd-logo
+    {
+    height:52px;
+    width: 106px;
+    }
+
+    .cfm-social-media-icon {
+      height:25px;
+      width: 25px;
+    }
+
+    .cfm-header-text
+    {
+        font-size:2.2em;
+    }  
+
+  }
+
+  @media (max-width: 768px) {
+    .cfm-text-over-text {
+      font-size: 2.2em;
+      margin-left:41%;
+      margin-right:59%;
+    }
+
+    .cfm-header-text
+    {
+        font-size:2.0em;
+    }
+
+    .cfm-content
+    {
+      position:relative;
+      top:8.9rem;
+      height:3rem;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+    .cfm-text-over-text {
+        font-size: 1.5em;
+        margin-left:39%;
+        margin-right:61%;
+      }
+
+      .cfm-footer-text
+      {
+          font-size:.6em;
+      }
+  
+      .cfm-scfd-logo
+      {
+      height:42px;
+      width: 96px;
+      }
+
+      .cfm-social-media-icon {
+        height:15px;
+        width: 15px;
+      }
+
+      .cfm-header-text
+      {
+          font-size:1.7em;
+      }      
+    }
+
+  @media (max-width: 430px) and (min-width:344px) {
+    .cfm-text-over-text {
+        font-size: 1.1em;
+        margin-left:35%;
+        margin-right:65%;
+    }
+
+    .cfm-footer-text
+    {
+        font-size:.4em;
+    }
+
+    .cfm-scfd-logo
+    {
+    height:32px;
+    width: 86px;
+    }
+
+    .cfm-social-media-icon {
+      height:35px;
+      width: 35px;
+    }
+
+    .cfm-social-media-icon {
+      height:15px;
+      width: 15px;
+    }
+
+    .cfm-header-text
+    {
+        font-size:.9em;
+    }
+
+    .cfm-content
+    {
+      position:relative;
+      top:9rem;
+      height:2.8rem;
+    }
+
+  }
+
+  @media (max-width: 344px) {
+    .cfm-text-over-text {
+        font-size: 1.1em;
+        margin-left:35%;
+        margin-right:65%;
+    }
+
+    .cfm-footer-text
+    {
+        font-size:.35em;
+    }
+
+    .cfm-scfd-logo
+    {
+    height:32px;
+    width: 86px;
+    }
+
+    .cfm-social-media-icon {
+      height:15px;
+      width: 15px;
+    }
+
+    .cfm-header-text
+    {
+        font-size:.8em;
+    }
+
+    .cfm-content
+    {
+      position:relative;
+      top:8.7rem;
+      height:3rem;
+    }
+  }
+
+ 
+
+ 

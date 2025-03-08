@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CFOOTMAD - Colorado Friends Of Old Time  Music And Dance</title>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../../js/scripts.js"></script>
+        <!-- CFOOTMAD JS-->
+        <script src="../../js/cfootmad.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                
+        <link rel="icon" type="../image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <link href="../../css/CFOOTMAD.css" rel="stylesheet" />
+        <link href="../../css/accordian.css" rel="stylesheet" />
+        <link href="../../css/contactus.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <div id="navbarcontainer"></div> 
+
+        <div id="contentcontainer" class="cfm-container">
+          <div class="col-lg-6"> 
+            <div class="p-2">
+              <div id="editform" class="cfm-hide">
+                <h2 class="display-4">Edit/Modify Person</h2>
+                <form id="contact-form">
+                    <h3>Personal Details</h3>
+                    <label for="firstname">First Name:<span class="cfm-required">*</span></label>
+                    <input type="text" id="firstname" name="firstname" required><br><br>
+                    <label for="lastname">Last Name:<span class="cfm-required">*</span></label>
+                    <input type="text" id="lastname" name="lastname" required><br><br>
+                    <label for="email">Email:<span class="cfm-required">*</span></label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="addressline1">Address Line 1:</label>
+                    <input type="text" id="addressline1" name="addressline1"><br><br>
+                    <label for="addressline2">Address Line 2:</label>
+                    <input type="text" id="addressline2" name="addressline2"><br><br>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city"><br><br>
+                    <label for="state">State:</label>
+                    <select id="state" name="state">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="ME">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="QA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                      </select><br><br>
+                      <label for="zipcode">ZIP Code:</label>
+                      <input type="text" id="zipcode" name="zipcode"><br><br>
+                      <label for="mainphone">Main Phone:</label>
+                      <input type="text" id="mainphone" name="mainphone"><br><br>
+                      <label for="mobilephone">Mobile Phone:</label>
+                      <input type="text" id="mobilephone" name="mobilephone"><br><br>
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image"><br><br>
+
+                      <br>
+                      <h3>Account Details</h3>
+                      <label for="membershiptype">Membership Type:</label>
+                      <select id="membershiptype" name="membershiptype">
+                        <option value="NA">- None -</option>
+                        <option value="I">Individual</option>
+                        <option value="F">Family</option>
+                        <option value="C">Contributing</option>
+                        <option value="G">Group</option>
+                      </select>
+                      <br><br>
+                      <label for="familymembers">Family Members:</label>
+                      <input type="text" id="familymembers" name="familymembers"><br><br>
+
+                      <label for="username">User Name:<span class="cfm-required">*</span></label>
+                      <input type="text" id="username" name="username" required><br><br>
+                      <label for="password">Password:<span class="cfm-required">*</span></label>
+                      <input type="password" id="password" name="password" required>
+                      <label for="reenterpassword">Re-enter Password:<span class="cfm-required">*</span></label>
+                      <input type="password" id="reenterpassword" name="reenterpassword" required>
+
+                      <br><br>
+                      <h3>Status</h3>
+                      <input type="radio" id="active" name = "status" value="active">&nbsp;Active&nbsp;&nbsp;
+                      <input type="radio" id="blocked" name = "status" value="blocked">&nbsp;Blocked
+
+                      <br><br>
+                      <h3>Roles</h3>
+                      <input type="checkbox" id="emailonly" name = "roles" value="active">&nbsp;email Only<br>
+                      <input type="checkbox" id="member" name = "roles" value="active">&nbsp;Member<br>
+                      <input type="checkbox" id="caller" name = "roles" value="active">&nbsp;Caller<br>
+                      <input type="checkbox" id="musician" name = "roles" value="active">&nbsp;Musician<br>
+                      <input type="checkbox" id="newsletter" name = "roles" value="active">&nbsp;Newsletter<br>
+                      <input type="checkbox" id="membership" name = "roles" value="active">&nbsp;Membership<br>
+                      <input type="checkbox" id="coordinator" name = "roles" value="active">&nbsp;Coordinator<br>
+                      <input type="checkbox" id="treasurer" name = "roles" value="active">&nbsp;Treasurer<br>
+                      <input type="checkbox" id="board" name = "roles" value="active">&nbsp;Board<br>
+                      <input type="checkbox" id="webmaster" name = "roles" value="active">&nbsp;Webmaster<br>
+                      <input type="checkbox" id="administrator" name = "roles" value="active">&nbsp;Administrator<br>
+                      <input type="checkbox" id="rendezvous" name = "roles" value="active">&nbsp;Rendezvous
+
+                      <br><br>
+                      <h3>Options</h3>
+                      <input type="checkbox" id="displayinfo" name = "options" value="true">&nbsp;Allow members to see your information<br>
+                      <input type="checkbox" id="receiveemail" name = "options" value="true">&nbsp;receive email (special events, newsletter, etc.)<br>
+                      <input type="checkbox" id="receivememberrenewal" name = "options" value="true">&nbsp;Receive Membership Renewal email.<br>
+                      <input type="checkbox" id="recievegroupmessages" name = "options" value="true">&nbsp;Receive Group Messages<br>
+
+                      <br><br>
+                      <h3>Account Valid Until</h3>
+                      <input type="date" id="expirationdate" name="expirationdate" min="2024-01-01" max="2026-12-31" step="1">
+
+                      <br><br>
+                      <input type="submit" value="Save">
+                </form>
+              </div>
+
+              <div id="peoplelist" class="cfm-center cfm-show">
+                <table class="cfm-datatable">
+                  <tr>
+                    <th class="cfm-datatable-th">First Name</div>
+                    <th class="cfm-datatable-th">Last Name</div>
+                    <th class="cfm-datatable-th">EMail</div>
+                    <th class="cfm-datatable-th">Address Line 1</div>
+                    <th class="cfm-datatable-th">Address Line 2</div>
+                    <th class="cfm-datatable-th">City</div>
+                    <th class="cfm-datatable-th">State</div>
+                    <th class="cfm-datatable-th">Zipcode</div>
+                    <th class="cfm-datatable-th">Main Phone</div>
+                    <th class="cfm-datatable-th">Mobile Phone</div>
+                    <th class="cfm-datatable-th"></div>
+                    <th class="cfm-datatable-th"></div>
+                    </tr>
+                  <tr>
+                    <td class="cfm-datatable-td">aaaaaa</div>
+                    <td class="cfm-datatable-td">bbbbbb</div>
+                    <td class="cfm-datatable-td">cccccc</div>
+                    <td class="cfm-datatable-td">dddddd</div>
+                    <td class="cfm-datatable-td">eeeeee</div>
+                    <td class="cfm-datatable-td">ffffff</div>
+                    <td class="cfm-datatable-td">gggggg</div>
+                    <td class="cfm-datatable-td">hhhhhh</div>
+                    <td class="cfm-datatable-td">iiiiii</div>
+                    <td class="cfm-datatable-td">jjjjjj</div>
+                    <td class="cfm-datatable-td"><input type="button" name="editrecord" value="Edit" onclick=""></div>  
+                    <td class="cfm-datatable-td"><input type="button" name="deleterecord" value="Delete" onclick=""></div>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      <!-- load page sections-->
+      <script type="text/javascript">
+        loadHTML("navbarcontainer","admin_navigation.html");
+      </script>
+
+    </body>
+</html>

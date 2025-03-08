@@ -1,0 +1,29 @@
+{
+	"folders": [ 
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"tab.activeBorder": "#7655FF",
+			"tab.unfocusedActiveBorder": "#7655FF"
+		},
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "CFOOTMAD",
+				"database": "CFOOTMAD",
+				"username": "tom",
+				"password": "Babybuttcrack#100"
+			}
+		]
+	}
+}
