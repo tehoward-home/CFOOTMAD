@@ -1,5 +1,5 @@
 <?php
-namespace CFOOTMAD\Utility;
+namespace CFOOTMAD\Utility; 
 
 class StoredProcHandler extends DatabaseHandler
 {

@@ -1,7 +1,7 @@
 <?php
 namespace CFOOTMAD\Utility;
 
-use CFOOTMAD\Utility\Result;
+use CFOOTMAD\Utility\Result; 
 
 class ProcResult
 {

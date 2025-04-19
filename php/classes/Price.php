@@ -5,7 +5,7 @@ use CFOOTMAD\Utility\StoredProcHandler;
 
 class Price
 {
-    public function __construct()
+    public function __construct() 
     {
     }
 

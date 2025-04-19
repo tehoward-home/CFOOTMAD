@@ -8,7 +8,7 @@
 namespace CFOOTMAD\Utility;
 
 USE PDO;
-USE PDOException;
+USE PDOException; 
 
 
 class DatabaseConnection {

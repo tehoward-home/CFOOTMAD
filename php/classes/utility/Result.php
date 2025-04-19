@@ -2,7 +2,7 @@
 namespace CFOOTMAD\Utility;
 
 class Result {
-    private $status;
+    private $status; 
     private $returnMessage;
 
     public function __construct() {

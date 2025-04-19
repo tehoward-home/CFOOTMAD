@@ -5,7 +5,7 @@ namespace CFOOTMAD\Utility;
 use CFOOTMAD\Utility\DatabaseConnection;
 use CFOOTMAD\Utility\ProcResult;
 use PDO;    
-use PDOException;
+use PDOException; 
 
 abstract class DatabaseHandler 
 {
