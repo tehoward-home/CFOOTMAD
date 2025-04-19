@@ -1,4 +1,6 @@
 <?php
+namespace CFOOTMAD\Utility;
+
 class Result {
     private $status;
     private $returnMessage;

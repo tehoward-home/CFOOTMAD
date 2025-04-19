@@ -1,14 +1,16 @@
 <?php
 
-require_once 'Result.php';
-
 // ----------------------------------------------------------------------
 // Database connection, retrieves connection values from environment
 //
 // Usage example
 // $db = new DatabaseConnection();
-// $db->connect();
-// ----------------------------------------------------------------------
+namespace CFOOTMAD\Utility;
+
+USE PDO;
+USE PDOException;
+
+
 class DatabaseConnection {
     private $host;
     private $dbname;
@@ -32,7 +34,11 @@ class DatabaseConnection {
 
     public function Result() {
         return $this->result;
-    }    
+    }  
+    
+    public function Prepare($prepareStatement){
+        return $this->connection->prepare($prepareStatement);
+    }  
 
     public function connect()
     {
@@ -45,6 +51,13 @@ class DatabaseConnection {
             $this->result->ReturnMessage = $e->getMessage();
             $this->result->Status = false;
         }
+    }
+
+    public function disconnect()
+    {
+        $this->connection = null;
+        $this->result->ReturnMessage = 'Disconnected successfully.';
+        $this->result->Status = true;
     }
 }
 
