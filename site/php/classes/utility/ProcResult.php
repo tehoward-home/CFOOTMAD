@@ -48,7 +48,7 @@ class ProcResult
         $this->data = [];
     }
 
-    public function ClearResult()
+    public function clearResult()
     {
         $this->result = new Result();
     }

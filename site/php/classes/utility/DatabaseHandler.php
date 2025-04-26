@@ -24,7 +24,7 @@ abstract class DatabaseHandler
     abstract protected function select($procedureName, $inputParams);
 
     // Helper method to execute stored procedures
-    protected function executeProcedure($procedureName, $inputParams): ProcResult
+    protected function ExecuteProcedure($procedureName, $inputParams): ProcResult
     {
         try {
             $this->procResult = new ProcResult();

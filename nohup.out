@@ -1,0 +1,2 @@
+[Sat Apr 19 19:38:06 2025] PHP Warning:  JIT is incompatible with third party extensions that override zend_execute_ex(). JIT disabled. in Unknown on line 0
+[Sat Apr 19 19:38:06 2025] Failed to listen on localhost:8000 (reason: Address already in use)

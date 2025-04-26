@@ -1,5 +1,7 @@
 <?php
 
+namespace CFOOTMAD\Classes;
+
 use CFOOTMAD\Utility\ProcResult;
 use CFOOTMAD\Utility\StoredProcHandler;
 
@@ -37,7 +39,7 @@ class Price
         return $storedProcHandler->Select('spSelectPrice', $inputParameters);
     }
 
-    public function SelectAllPrice(): ProcResult
+    public function SelectAllPrices(): ProcResult
     {
         $storedProcHandler = new StoredProcHandler();
         $inputParameters = [];
