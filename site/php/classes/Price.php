@@ -1,9 +1,9 @@
 <?php
 
-namespace CFOOTMAD\Classes;
+namespace site\php\classes\utility;
 
-use CFOOTMAD\Utility\ProcResult;
-use CFOOTMAD\Utility\StoredProcHandler;
+require_once __DIR__.'/utility/ProcResult.php';
+require_once __DIR__.'/utility/StoredProcHandler.php';
 
 class Price
 {
@@ -36,14 +36,14 @@ class Price
     {
         $storedProcHandler = new StoredProcHandler();
         $inputParameters  = ["id" => $id];
-        return $storedProcHandler->Select('spSelectPrice', $inputParameters);
+        return $storedProcHandler->Select('spGetPrice', $inputParameters);
     }
 
     public function SelectAllPrices(): ProcResult
     {
-        $storedProcHandler = new StoredProcHandler();
+        $storedProcHandler = new StoredProcHandler;
         $inputParameters = [];
-        return $storedProcHandler->SelectAll('spSelectAllPrice', $inputParameters);
+        return $storedProcHandler->SelectAll('spGetAllPrices', $inputParameters);
     }
 
     private function LoadFormValues($post): Array
@@ -58,7 +58,6 @@ class Price
         $inputParameters['freeAge'] = isset($post['freeAge']) ? intval($post['freeAge']) : null;
         $inputParameters['createdById'] = isset($post['createdById']) ? intval($post['createdById']) : null;
         $inputParameters['createdDate'] = date('Y-m-d H:i:s');
-        $inputParameters['isSlidingScale'] = isset($post['isSlidingScale']) ? filter_var($post['isSlidingScale'], FILTER_VALIDATE_BOOLEAN) : null;
         return $inputParameters;
     }
 }

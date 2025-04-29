@@ -1,7 +1,6 @@
 <?php
-namespace CFOOTMAD\Utility;
 
-use CFOOTMAD\Utility\Result; 
+namespace site\php\classes\utility;  
 
 class ProcResult
 {
@@ -31,6 +30,14 @@ class ProcResult
     public function SetReturnMessage($returnMessage)
     {
         $this->result->setReturnMessage($returnMessage);
+    }
+    public function GetStatus()
+    {
+        return $this->result->getStatus();
+    }
+    public function SetStatus($status)
+    {
+        $this->result->setStatus($status);
     }
 
     public function GetData()

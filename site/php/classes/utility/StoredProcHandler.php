@@ -1,5 +1,8 @@
 <?php
-namespace CFOOTMAD\Utility; 
+namespace site\php\classes\utility; 
+
+require_once __DIR__.'/ProcResult.php';
+require_once __DIR__.'/DatabaseHandler.php';
 
 class StoredProcHandler extends DatabaseHandler
 {
@@ -8,22 +11,22 @@ class StoredProcHandler extends DatabaseHandler
         return $this->ExecuteProcedure($procedureName, $inputParams);
     }
 
-    public function Update($procedureName, $inputParams, $outputParams = [])
+    public function Update($procedureName, $inputParams): ProcResult
     {
         return $this->ExecuteProcedure($procedureName, $inputParams);
     }
 
-    public function Delete($procedureName, $inputParams, $outputParams = [])
+    public function Delete($procedureName, $inputParams): ProcResult
     {
         return $this->ExecuteProcedure($procedureName, $inputParams);
     }
 
-    public function Select($procedureName, $inputParams, $outputParams = [])
+    public function Select($procedureName, $inputParams)
     {
         return $this->ExecuteProcedure($procedureName, $inputParams);
     }
 
-    public function SelectAll($procedureName, $inputParams, $outputParams = [])
+    public function SelectAll($procedureName, $inputParams)
     {
         return $this->ExecuteProcedure($procedureName, $inputParams);
     }

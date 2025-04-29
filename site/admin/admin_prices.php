@@ -27,69 +27,66 @@
 </head>
 <body id="page-top">
     <?php
-    // Include necessary files    
-    require_once '../php/classes/Price.php';
+        // Include necessary files    
+        require_once '../php/classes/Price.php';
 
-    session_start();
+        session_start();
 
-    use CFOOTMAD\Classes\Price;
-   
+        use site\php\classes\utility\Price;
+    
+        $price = new Price();
+        $result = $price->SelectAllPrices();
 
-    // Fetch all prices
-    //$price = new Price();
-    $price = new Price();
-    $result = $price->SelectAllPrices();
+        if ($result->GetResult()->GetStatus()) {
+            $prices = $result->GetData(); // Assuming the data is returned in a 'Data' property
+        } else {
+            $prices = [];
+            echo "<p>Error: " . $result->GetReturnMessage() . "</p>";
+        }
 
-    if ($result->GetResult()->GetStatus()) {
-        $prices = $result->GetData(); // Assuming the data is returned in a 'Data' property
-    } else {
-        $prices = [];
-        echo "<p>Error: " . $result->GetReturnMessage() . "</p>";
-    }
-
-    // Check if an edit request is made
-    $editPrice = null;
-    if (isset($_GET['edit_id'])) {
-        foreach ($prices as $p) {
-            if ($p['id'] == $_GET['edit_id']) {
-                $editPrice = $p;
-                break;
+        // Check if an edit request is made
+        $editPrice = null;
+        if (isset($_GET['edit_id'])) {
+            foreach ($prices as $p) {
+                if ($p['id'] == $_GET['edit_id']) {
+                    $editPrice = $p;
+                    break;
+                }
             }
         }
-    }
 
-    // Generate CSRF token
-    if (empty($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
+        // Generate CSRF token
+        if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        }
     ?>
     <div class="cfm-container">
         <div class="cfm-center">
             <h2 class="display-5">Price List</h2>
-            <table class="cfm-table">
+            <table class="cfm-datatable">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Sliding Low</th>
-                        <th>Sliding High</th>
-                        <th>Non-Member</th>
-                        <th>Member</th>
-                        <th>Student</th>
-                        <th>Free Age</th>
-                        <th>Actions</th>
+                        <th class="cfm-datatable-th">Name</th>
+                        <th class="cfm-datatable-th">Sliding Low</th>
+                        <th class="cfm-datatable-th">Sliding High</th>
+                        <th class="cfm-datatable-th">Non-Member</th>
+                        <th class="cfm-datatable-th">Member</th>
+                        <th class="cfm-datatable-th">Student</th>
+                        <th class="cfm-datatable-th">Free Age</th>
+                        <th class="cfm-datatable-th">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (!empty($prices)): ?>
                         <?php foreach ($prices as $price): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($price['name']); ?></td>
-                                <td><?php echo htmlspecialchars($price['slidingLow']); ?></td>
-                                <td><?php echo htmlspecialchars($price['slidingHigh']); ?></td>
-                                <td><?php echo htmlspecialchars($price['nonMember']); ?></td>
-                                <td><?php echo htmlspecialchars($price['member']); ?></td>
-                                <td><?php echo htmlspecialchars($price['student']); ?></td>
-                                <td><?php echo htmlspecialchars($price['freeAge']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['Name']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['SlidingLow']); ?></td>
+                                <td class="cfm-datatable-td"> <?php echo htmlspecialchars($price['SlidingHigh']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['NonMember']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['Member']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['Student']); ?></td>
+                                <td class="cfm-datatable-td"><?php echo htmlspecialchars($price['FreeAge']); ?></td>
                                 <td>
                                     <a href="?edit_id=<?php echo $price['id']; ?>" class="cfm-button">Edit</a>
                                     <a href="ProcessPrice.php?action=delete&id=<?php echo $price['id']; ?>" class="cfm-button cfm-button-danger" onclick="return confirm('Are you sure you want to delete this price?');">Delete</a>

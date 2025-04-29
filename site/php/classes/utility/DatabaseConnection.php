@@ -5,8 +5,13 @@
 //
 // Usage example
 // $db = new DatabaseConnection();
-namespace CFOOTMAD\Utility;
+namespace site\php\classes\utility; 
 
+require_once __DIR__.'/ProcResult.php';
+require_once __DIR__.'/Result.php';
+
+//USE site\php\classes\utility\Result;
+//USE site\php\classes\utility\ProcResult;
 USE PDO;
 USE PDOException; 
 
@@ -22,17 +27,17 @@ class DatabaseConnection {
     public function __construct()
     {
         $this->host = getenv('DB_HOST') ?: 'localhost';
-        $this->dbname = getenv('DB_NAME') ?: 'your_database_name';
-        $this->username = getenv('DB_USER') ?: 'your_username';
-        $this->password = getenv('DB_PASS') ?: 'your_password';
+        $this->dbname = getenv('DB_NAME') ?: 'CFOOTMAD';
+        $this->username = getenv('DB_USER') ?: 'tom';
+        $this->password = getenv('DB_PASS') ?: 'Babybuttcrack#100';
         $this->result = new Result();
     }
 
-    public function Connection() {
+    public function Connection(): PDO {
         return $this->connection;
     }
 
-    public function Result() {
+    public function Result(): Result {
         return $this->result;
     }  
     
@@ -40,24 +45,24 @@ class DatabaseConnection {
         return $this->connection->prepare($prepareStatement);
     }  
 
-    public function connect()
+    public function connect(): void
     {
         try {
             $this->connection = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->result->ReturnMessage = 'Connection successful.';
-            $this->result->Status = true;
+            $this->result->setReturnMessage('Connection successful.');
+            $this->result->setStatus(true);
         } catch (PDOException $e) {
-            $this->result->ReturnMessage = $e->getMessage();
-            $this->result->Status = false;
+            $this->result->setReturnMessage($e->getMessage());
+            $this->result->setStatus(false);
         }
     }
 
-    public function disconnect()
+    public function disconnect(): void
     {
         $this->connection = null;
-        $this->result->ReturnMessage = 'Disconnected successfully.';
-        $this->result->Status = true;
+        $this->result->setReturnMessage('Disconnected successfully.');
+        $this->result->setStatus(true);
     }
 }
 

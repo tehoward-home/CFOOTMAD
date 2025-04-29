@@ -1,5 +1,5 @@
 <?php
-namespace CFOOTMAD\Utility;
+namespace site\php\classes\utility;  
 
 class Result {
     private $status; 
